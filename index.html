@@ -10,14 +10,32 @@
 		<meta content="image/gif" property="og:image:type">
 		<meta content='https://github.com/WholeWheatLemon/Website/blob/main/funny%20lil%20cat%20doing%20his%20thing.gif?raw=true' property='og:image'>
 		<style>
-			body {
+			html {
 				background-color: #2a2730;
 			}
-			h1 {
+
+            body {
+				/* Make sure body renders well on large monitors */
+                max-width: 768px;
+
+				/* Center body */
+				margin-left: auto;
+				margin-right: auto;
+				
+				margin-top: 3%;
+            }
+
+			h1, p {
 				color: white;
 			}
-			p {
-				color: white;
+
+			/* Make sure links work with the background color */
+			a {
+				color: #0392da;
+			}
+
+			a:visited {
+				color: #a018df;
 			}
 		</style>
 	</head>
