@@ -1,0 +1,45 @@
+---
+import Page from "@layouts/Page.astro";
+import Card from "@components/Card.astro";
+---
+<Page title="Ollie">
+    <!-- remove default header -->
+    <Fragment slot="header" />
+
+    <center>
+        <img id="avatar" src="https://avatars.githubusercontent.com/u/70181223?v=4">
+        <h1 style="margin-bottom: 10px">Ollie</h1>
+        <a href="/portfolio">Portfolio</a>
+        <span style="color: var(--light); margin: 5px">•</span>
+        <a href="https://x.com/WholeWheatOllie">Twitter</a>
+        <span style="color: var(--light); margin: 5px">•</span>
+        <a href="https://discord.com/users/429367918187380737">Discord</a>
+    </center>
+
+    <section id="experience">
+        <h2 class="section" style="margin-top: -5px">Experience</h2>
+
+        <Card
+            title="Starfury"
+            description="Pixel Artist"
+            url="https://www.starfury.gg"
+            extra="2024-current"
+        />
+
+        <Card
+            title="Hideaway"
+            description="Pixel Artist"
+            url="https://hideaway.gg"
+            extra="2024-current"
+        />
+    </section>
+
+    <style>
+        #avatar {
+            border-radius: 100%;
+            width: 5em;
+            height: 5em;
+            margin-bottom: -1em;
+        }
+    </style>
+</Page>

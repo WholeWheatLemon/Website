@@ -1,0 +1,26 @@
+---
+import "../style.css";
+const { title } = Astro.props;
+---
+<html lang="en">
+    <head>
+        <title>{title}</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="theme-color" content="#94C768" />
+        <slot name="metadata">
+            <meta property="og:title" content={title} />
+        </slot>
+    </head>
+    <body>
+        <slot name="header">
+            <a href="/">« Home</a>
+            <h1 style="margin-top: 10px">{title}</h1>
+        </slot>
+
+        <main>
+            <slot />
+        </main>
+    </body>
+</html>
