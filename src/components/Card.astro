@@ -1,0 +1,54 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    url?: string;
+    extra?: string;
+}
+
+const { title, description, url, extra } = Astro.props;
+---
+<div class="card">
+    <h2>{
+        url == null
+        ? title
+        : <a href={url}>{title}</a>
+    }</h2>
+
+    <p>{description}</p>
+    <p class="extra">{extra}</p>
+</div>
+
+<style>
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 30em;
+
+        padding: 1.25em;
+        background-color: var(--dark);
+        border-radius: 0.5em;
+        margin-bottom: 1em;
+    }
+
+    .card .extra {
+        position: absolute;
+        right: 1.25em;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .card * {
+        margin: 0;
+    }
+
+    .card a {
+        text-decoration: none;
+    }
+
+    .card a:hover {
+        text-decoration: underline;
+    }
+</style>
