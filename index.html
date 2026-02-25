@@ -21,7 +21,7 @@
         } */
 
         .image-link-container {
-          margin-right: 0;
+          margin-left: 0
         }
       }
 
@@ -93,6 +93,7 @@
         gap: calc(24px * var(--pixel-size));
         row-gap: calc(4px * var(--pixel-size));
         margin: calc(11px * var(--pixel-size));
+        margin-left: calc(22px * var(--pixel-size));
       }
 
       .image-link {
@@ -120,6 +121,12 @@
         image-rendering: pixelated;
         height: calc(18px * var(--pixel-size));
         width: calc(18px * var(--pixel-size));
+      }
+
+      @media screen and (max-width: 600px) {
+        .image-link-container {
+          margin-left: calc(11px * var(--pixel-size));
+        }
       }
 
     </style>
