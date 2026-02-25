@@ -7,6 +7,18 @@
     <title>ollie.lol - contact</title>
 
     <style>
+
+        :root {
+            --pixel-size: 4;
+        }
+
+        @media screen and (max-width: 600px) {
+            
+            :root {
+                --pixel-size: 3;
+            }
+        }
+
         @font-face { font-family: bobbledop; src: url('../bobbledop.ttf'); }
 
         body {
@@ -15,20 +27,20 @@
 
         p {
             margin: 0;
-            padding: 12px;
+            padding: calc(6px * var(--pixel-size));
             font-family: bobbledop,serif;
-            font-size: 48px;
-            line-height: 78px;
+            font-size: calc(8px * var(--pixel-size));
+            line-height: calc(10px * var(--pixel-size));
             color: #ffaf15;
             text-align: center;
         }
 
         pre {
             margin: 0;
-            padding: 12px;
+            padding: calc(2px * var(--pixel-size));
             font-family: bobbledop,serif;
-            font-size: 48px;
-            line-height: 66px;
+            font-size: calc(8px * var(--pixel-size));
+            line-height: calc(10px * var(--pixel-size));
             color: #ffaf15;
         }
 
@@ -36,11 +48,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding-top: 60px;
+            padding-top: calc(10px * var(--pixel-size));
         }
 
         a {
             text-decoration: none;
+        }
+
+        br {
+            display: block;
+            content: "";
+            margin-bottom: calc(10px * var(--pixel-size));
         }
 
     </style>
@@ -49,7 +67,7 @@
     <a href="../">
         <pre class="centered-text" style="color:#e0e0e0">&lt; back </pre>
     </a>
-    <p class="centered-text" style="padding-top: 36px">contact me!</p>
+    <p class="centered-text" style="padding-top: calc(6px * var(--pixel-size))">contact me!</p>
 
     <div class="centered-text">
         <p style="color:#e0e0e0">

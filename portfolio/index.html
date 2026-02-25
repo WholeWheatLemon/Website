@@ -7,6 +7,22 @@
     <title>ollie.lol - portfolio</title>
 
     <style>
+
+        :root {
+            --pixel-size: 4;
+        }
+
+        @media screen and (max-width: 600px) {
+            
+            :root {
+                --pixel-size: 3;
+            }
+
+            .spacer {
+                display: none;
+            }
+        }
+
         @font-face { font-family: bobbledop; src: url('../bobbledop.ttf'); }
 
         a {
@@ -15,32 +31,33 @@
 
         p {
             margin: 0;
-            padding: 12px;
+            padding: calc(2px * var(--pixel-size));
             font-family: bobbledop,serif;
-            font-size: 48px;
-            line-height: 66px;
+            font-size: calc(8px * var(--pixel-size));
+            line-height: calc(11px * var(--pixel-size));
+            padding-bottom: calc(10px * var(--pixel-size));
             color: #ffaf15;
         }
 
         pre {
             margin: 0;
-            padding: 12px;
+            padding: calc(2px * var(--pixel-size));
             font-family: bobbledop,serif;
-            font-size: 48px;
-            line-height: 66px;
+            font-size: calc(8px * var(--pixel-size));
+            line-height: calc(11px * var(--pixel-size));
             color: #ffaf15;
         }
 
         body {
             background-color: #282727;
-            padding-bottom: 180px;
+            padding-bottom: 120px;
         }
 
         .centered-text {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding-top: 60px;
+            padding-top: calc(10px * var(--pixel-size));
         }
 
         .item-container {
@@ -50,7 +67,7 @@
         }
 
         .item {
-            width: 512px;
+            width: min(100%, 512px);
             height: auto;
         }
 
@@ -61,7 +78,7 @@
     <a href="../">
         <pre class="centered-text" style="color:#e0e0e0">&lt; back  </pre>
     </a>
-    <p class="centered-text" style="padding-top: 36px">--- portfolio ---</p>
+    <pre class="centered-text" style="padding-top: 36px"><span class="spacer">--- </span>portfolio<span class="spacer"> ---</span></pre>
 
     <p class="centered-text" style="color:#e0e0e0">emojis</p>
     <div class="item-container">
