@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="../images/emoji-guidelines/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ollie's emoji guidelines!</title>
+
+    <style>
+
+        :root {
+            --pixel-size: 4;
+        }
+
+        @media screen and (max-width: 775px) {
+            
+            :root {
+                --pixel-size: 3;
+            }
+        }
+
+        @font-face { font-family: bobbledop; src: url('../bobbledop.ttf'); }
+
+        body {
+            background-color: #cecec9;
+            padding-top: calc(14px * var(--pixel-size));
+            padding-bottom: calc(64px * var(--pixel-size));
+            color: #333333;
+        }
+
+        p {
+            font-family: bobbledop,serif;
+            font-size: calc(8px * var(--pixel-size));
+            line-height: calc(11px * var(--pixel-size));
+            text-align: center;
+            width: min(90vw, 1200px);
+        }
+
+        .centered-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .centered-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .toggle-dark {
+            image-rendering: auto;
+            image-rendering: crisp-edges;
+            image-rendering: pixelated;
+            height: calc(17px * var(--pixel-size));
+            width: auto;
+            cursor: pointer;
+        }
+
+        .toggle-light {
+            image-rendering: auto;
+            image-rendering: crisp-edges;
+            image-rendering: pixelated;
+            height: calc(17px * var(--pixel-size));
+            width: auto;
+            cursor: pointer;
+            display: none
+        }
+
+        .emoji {
+            image-rendering: auto;
+            image-rendering: crisp-edges;
+            image-rendering: pixelated;
+            height: calc(14px * var(--pixel-size));
+            width: auto;
+        }
+
+        .inline-emoji {
+            image-rendering: auto;
+            image-rendering: crisp-edges;
+            image-rendering: pixelated;
+            height: calc(11px * var(--pixel-size));
+            width: auto;
+            margin-bottom: calc(-2px * var(--pixel-size));
+            padding-right: calc(1px * var(--pixel-size));
+        }
+
+    </style>
+</head>
+<body>
+    <div class="centered-image">
+        <img src="../images/emoji-guidelines/brightness-switch/light_mode.png" alt="dark mode switch" class="toggle-dark" onclick="toggleMode()" id="toggle-dark">
+        <img src="../images/emoji-guidelines/brightness-switch/dark_mode.png" alt="light mode switch" class="toggle-light" onclick="toggleMode()" id="toggle-light">
+    </div>
+
+    <div class="centered-text">
+        <p style="padding-top: calc(10px * var(--pixel-size))">
+            <img src="../images/emoji-guidelines/emojis/sparkles_icon.png" class="emoji" style="height: calc(8px * var(--pixel-size)); padding-right: calc(1px * var(--pixel-size)); margin-bottom: calc(-1px * var(--pixel-size));">
+            ollie's
+            <img src="../images/emoji-guidelines/emojis/icon.png" class="emoji" style="height: calc(8px * var(--pixel-size)); margin-bottom: calc(-1px * var(--pixel-size));">
+            <span style="color: #cc7f05; white-space: pre-wrap;">emoji</span>
+            guidelines!
+            <img src="../images/emoji-guidelines/emojis/sparkles_icon.png" class="emoji" style="height: calc(8px * var(--pixel-size)); margin-bottom: calc(-1px * var(--pixel-size));">
+        </p>
+    </div>
+
+    <div class="centered-text">
+        <p style="padding-top: calc(14px * var(--pixel-size))">
+            this is fred.<br>
+            <img src="../images/emoji-guidelines/emojis/wave.png" alt="fred waving" class="emoji" style="height: calc(14px * var(--pixel-size))"><br><br><br>
+
+            fred will be our test dummy.<br>
+            <img src="../images/emoji-guidelines/emojis/scared.png" alt="fred scared" class="emoji" style="height: calc(14px * var(--pixel-size))"><br><br><br>
+
+            pixel emojis are SERIOUS business! it's important you know what you're doing when you make them!<br><br><br>
+
+            here are my basic principles of emojis:<br><br><br>
+
+            1. emojis show emotion!<br><br>
+            this is a simple one but make sure you remember it! no matter if the emotion is more clear like a grin
+            <img src="../images/emoji-guidelines/emojis/grin.png" alt="grin emoji" class="inline-emoji">,
+            or more abstract like a skull
+            <img src="../images/emoji-guidelines/emojis/skull.png" alt="skull emoji" class="inline-emoji">,
+            emojis exist to show emotion! make sure you have a clear idea of what emotion you're trying to portray.<br><br><br><br>
+
+            2. stay consistent with your style (sometimes!)<br><br>
+            you should have a consistent style with most of your emojis.
+        </p>
+    </div>
+</body>
+<script>
+    var isDarkMode = false;
+
+    function toggleMode() {
+        if (isDarkMode) {
+            lightMode();
+        } else {
+            darkMode();
+        }
+    }
+
+    function darkMode() {
+        isDarkMode = true;
+        document.body.style.backgroundColor = "#333333";
+        document.body.style.color = "#cecec9";
+        document.getElementById("toggle-dark").style.display = "none";
+        document.getElementById("toggle-light").style.display = "block";
+    }
+
+    function lightMode() {
+        isDarkMode = false;
+        document.body.style.backgroundColor = "#cecec9";
+        document.body.style.color = "#333333";
+        document.getElementById("toggle-dark").style.display = "block";
+        document.getElementById("toggle-light").style.display = "none";
+    }
+</script>
+</html>
